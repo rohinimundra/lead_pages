@@ -1,0 +1,101 @@
+* { margin: 0; padding: 0; outline: 0; }
+
+body, html { height: 100%; }
+
+body {
+    font-size: 12px;
+    line-height: 1.3;
+    font-family: "Museo500", Georgia, times, sans-serif;
+    color: #000;
+    background: url(images/body-bg.png);
+    min-width: 100%;
+}
+
+a { color: #0252aa; text-decoration: none; cursor: pointer; }
+a:hover { text-decoration: underline; }
+a img { border: 0; }
+
+h2 { padding: 0 0 17px; font-size: 30px; line-height: 35px; color:#fff; letter-spacing: -1px; font-weight:normal; }
+h2 span { color:#ffe700; }
+body.blue-page h2 { font-family: "Segoe-UI-SemiBold", arial, sans-serif; text-shadow: 1px 2px 2px #2ba1c9; }
+h3 { font-size: 24px; line-height: 28px; color:#fff; font-weight: normal;  }
+body.blue-page h3 { font: 22px/24px "Segoe-UI-Bold", arial, sans-serif; }
+h4 { padding: 0 0 8px 54px; margin-left:26px;  background: url(images/chat-icon.png) no-repeat 0 center; font-size: 24px; line-height: 40px; color:#333; text-shadow: 1px 3px 0 rgba(255, 255, 255, 0.5); -webkit-font-smoothing: antialiased; }
+body.blue-page h4 { margin-left:0;  font-family: "Segoe-UI-SemiBold", arial, sans-serif; }
+h5 { padding: 0 0 10px; font-size: 24px; line-height: 28px; color:#0d8db9; text-align:center; font-weight:normal;  }
+body.blue-page h5 { font-family: "Segoe-UI-SemiBold", arial, sans-serif; }
+
+input, textarea, select { font-size: 12px; font-family: arial, sans-serif; }
+textarea { overflow: auto; }
+
+.cl { display: block; height: 0; font-size: 0; line-height: 0; text-indent: -4000px; clear: both; }
+.notext { font-size: 0; line-height: 0; text-indent: -4000px; }
+.left, .alignleft { float: left; display: inline; }
+.right, .alignright { float: right; display: inline; }
+
+.shell { width: 960px; margin: 0 auto; }
+
+/*
+	Header
+*/
+
+header { position:relative;  height: 66px;  background: url(images/header-repeat.png) repeat-x 0 0; }
+body.blue-page header { height: 80px; background: url(images/heaer2-repeat.png) repeat-x 0 0; }
+
+h1#logo { width: 156px; padding: 11px 0 0; font-size: 0; line-height: 0; text-indent: -4000px;  }
+h1#logo a { display:block; height:34px; background: url(images/logo.png) no-repeat 0 0; }
+body.blue-page h1#logo { width: 185px; }
+body.blue-page h1#logo a { height: 40px; background: url(images/logo2.png) no-repeat 0 0;  }
+
+.facebook-holder { margin-top: -2px;  padding: 0 0 0 72px; }
+body.blue-page .facebook-holder { padding-left: 110px;  margin-top: 5px;  }
+
+/*
+	Content
+*/
+
+#content { padding-bottom: 20px;  }
+
+body.blue-page .top-part .video { padding-left:0;  }
+
+.top-part { background: url(images/top-repeat-bg.png) repeat-x 0 0; }
+.top-part .inner { height: 422px; background: url(images/top-part-bg.jpg) no-repeat center 0; }
+
+.top-part .video { padding: 33px 0 0 26px; }
+.top-part .text-holder { position:relative;  width: 290px; height: 394px;  padding: 28px 0 0; }
+.top-part .text-holder p { font: 20px/24px "Segoe-UI", arial, sans-serif; color:#fff; }
+.top-part .text-holder .host { position:absolute; bottom: 53px; left: 0;  }
+body.blue-page .top-part .text-holder .host  { bottom: 62px; }
+.top-part .text-holder .host span { display:block; padding-bottom:2px;  font: 24px/28px "SegoeUI-Light", arial, sans-serif; color:#fff; }
+body.blue-page .top-part .text-holder .host span { font-family: "Segoe-UI", arial, sans-serif; }
+.top-part .text-holder .host-img {  position:absolute; bottom: 29px; right: 14px; border: 3px solid #fff; }
+.top-part .text-holder .host-img img { display:block;  }
+
+.bottom-part { padding: 12px 0 0; }
+.outer-counter { width: 290px; }
+.bottom-part .counter-holder { width: 242px; padding: 14px 24px 10px; margin: 46px 0 0; background-color:#fff; border: 1px solid #dedede; box-shadow: 0 0 3px #dedede; }
+.bottom-part .counter-holder a { display:block; width: 157px; height: 65px; padding: 0 0 0 84px; margin: 0 0 16px; background: url(images/btn.png) no-repeat 0 0; font: 20px/65px "Segoe-UI-Bold", arial, sans-serif; color:#cba40b; }
+.bottom-part .counter-holder .counter { margin-bottom: 8px;  font: 14px/18px "Segoe-UI-SemiBold", arial, sans-serif; color:#666; }
+.bottom-part .counter-holder .counter .num-holder { float:left; display:inline;  background: url(images/counter-bg.png) repeat-x 0 0; text-align:center; font: 14px/14px "Segoe-UI-SemiBold", arial, sans-serif; color:#666; }
+.bottom-part .counter-holder .counter .num-holder .inner { height: 62px;  background: url(images/border-right.png) no-repeat right 0; }
+.bottom-part .counter-holder .counter .num-holder.last-holder .inner { background: none; }
+.bottom-part .counter-holder .counter .num-holder span { display:block; width: 80px; font: 48px/40px "Segoe-UI-Bold", arial, sans-serif; color:#555555; text-shadow: 0 3px 1px #fff; }
+.bottom-part .counter-holder span.text { display:block;  font: 14px/18px "Segoe-UI-SemiBold", arial, sans-serif; color:#666; text-align:center;  }
+
+.chat { width: 588px; height:490px; margin-left:26px;  }
+body.blue-page .chat { margin-left:0;  }
+
+/*
+	Footer
+*/
+
+footer { padding: 70px 0 0; }
+body.blue-page footer { padding: 19px 0 0; }
+footer .footer-logo { width: 211px; margin: 0 auto 80px; font-size: 0; line-height: 0; text-indent: -4000px;   }
+footer .footer-logo a { display:block; height: 46px; background: url(images/footer-logo.png) no-repeat 0 0;  }
+footer a.legal { display:block;  padding: 5px 0 0; font: 14px/16px "Segoe-UI", arial, sans-serif; color:#333; text-decoration:underline; text-align:center;  }
+footer a.legal:hover { text-decoration: none; }
+body.blue-page a.legal { color:#898989; line-height: 24px;  }
+body.blue-page footer span { display:block;  font: 14px/24px "Segoe-UI", arial, sans-serif; text-align:center; color:#898989; }
+body.blue-page footer span a { color:#898989; text-decoration: underline; }
+body.blue-page footer span a:hover { text-decoration: none; }

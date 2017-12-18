@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MarcDialogs.js</title>
+	<!-- META -->
+	<meta charset="UTF-8"/>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="description" content="MarcDialogs.js offers a simple solution to create quick and stylish modal dialogs for your site"/>
+	<meta name="keywords" content="javascript, modal, dialogs, custom, js, css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+	<!-- STYLE -->
+	<link type="text/css" rel="stylesheet" href="./MarcDialogs.css" media="all"/>
+	<!-- <link type="text/css" rel="stylesheet" href="../_libs/MarcLibs.css" media="all"/> -->
+	
+
+	<!-- JS -->
+	<script type="text/javascript" src="./MarcDialogs.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+	<div class="width">
+		<h1>MarcDialogs.js <a class="download-button github" href="https://github.com/marcrobledo/MarcDialogs.js" target="_blank">GitHub</a></h1>
+		<h2>A vanilla JavaScript library for adding quick and stylish modal dialogs to your site</h2>
+	</div>
+</header>
+
+
+<!-- HOW TO -->
+<div id="howto">
+	<div class="width">
+		<h3>Download</h3>
+		<a href="MarcDialogs.js" download>MarcDialogs.js</a> (<a href="MarcDialogs.min.js" download>~4kb minified</a>)<br/>
+		<a href="MarcDialogs.css" download>MarcDialogs.css</a>
+
+		<h3>Setup</h3>
+		Import them by adding the following lines inside <span class="mono">&lt;header&gt;</span>:
+<pre><code>&lt;script type="text/javascript" src="MarcDialogs.js"&gt;&lt;/script&gt;
+&lt;link type="text/css" rel="stylesheet" href="MarcDialogs.css" media="all"/&gt;</code></pre>
+	</div>
+</div>
+
+<!-- EXAMPLES -->
+<div class="width">
+<h3>Demos</h3>
+Build a quick alert dialog.
+<div class="code-container">
+	<div class="js"><h4>JS</h4>
+	<pre><code>MarcDialogs.alert('Custom message');</code></pre>
+	</div>
+</div>
+<div class="result">
+	<h4>Result</h4>
+	<div>Try it out: <button onclick="MarcDialogs.alert('Custom message');">Open dialog</button></div>
+</div>
+
+
+<hr/>
+Build a quick confirm dialog.
+<div class="code-container">
+	<div class="js"><h4>JS</h4>
+	<pre><code>MarcDialogs.confirm('Confirm message', function(){alert('do something here');MarcDialogs.close()});</code></pre>
+	</div>
+</div>
+<div class="result">
+	<h4>Result</h4>
+	<div>Try it out: <button onclick="MarcDialogs.confirm('Confirm message', function(){alert('do something here');MarcDialogs.close()});">Open dialog</button></div>
+</div>
+
+
+<hr/>
+Build your own custom dialog.
+<div class="code-container">
+	<div class="html"><h4>HTML</h4>
+	<pre><code>&lt;div id="dialog-custom1" class="dialog"&gt;
+	This is a custom dialog.
+	&lt;label for="login"&gt;Username&lt;/label&gt;
+	&lt;input type="text" id="login" /&gt;
+	&lt;label for="pwd"&gt;Password&lt;/label&gt;
+	&lt;input type="password" id="pwd" /&gt;
+	
+	&lt;div class="buttons"&gt;
+		&lt;button onclick="sendLoginForm()"&gt;Login&lt;/button&gt;
+		&lt;button onclick="MarcDialogs.close()"&gt;Cancel&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+	<div class="js"><h4>JS</h4>
+	<pre><code>MarcDialogs.open('custom1');</code></pre>
+	</div>
+</div>
+<div class="result">
+<button onclick="MarcDialogs.open('custom1');">Open dialog</button></div>
+</div>
+<div id="dialog-custom1" class="dialog" style="max-width:300px;">
+	<div class="row">
+	<div class="AW-Form-857913209" style="z-index:20">
+<script type="text/javascript">(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//forms.aweber.com/form/09/857913209.js";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, "script", "aweber-wjs-m6j22mh3m"));
+</script>
+    </div>	
+	</div>
+	
+
+	
+	<div class="buttons">
+		
+		<button onclick="MarcDialogs.close()">Cancel</button>
+	</div>
+</div>
+
+
+<hr/>
+Dialogs are stacked automatically as the user opens them. Mobile browsers can use the back button to close dialogs.
+<div class="code-container">
+	<div class="html"><h4>HTML</h4>
+	<pre><code>&lt;div id="dialog-custom2" class="dialog"&gt;
+	You can stack dialogs. Try to edit tags.&lt;br/&gt;
+	&lt;label for="item"&gt;Item&lt;/label&gt;
+	&lt;input type="text" class="full-width" /&gt;
+	Tags&lt;br/&gt;
+	&lt;span id="tags"&gt;#tag1 #tag2&lt;/span&gt; &lt;span onclick="MarcDialogs.open('custom3')"&gt;Edit&lt;/span&gt;
+	
+	&lt;div class="buttons"&gt;
+		&lt;button onclick="MarcDialogs.close()"&gt;Accept&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="dialog-custom3" class="dialog"&gt;
+	&lt;input type="checkbox" id="checkbox0" checked /&gt;&lt;label for="checkbox0"&gt;#tag1&lt;/label&gt;&lt;br/&gt;
+	&lt;input type="checkbox" id="checkbox1" checked /&gt;&lt;label for="checkbox1"&gt;#tag2&lt;/label&gt;&lt;br/&gt;
+	&lt;input type="checkbox" id="checkbox2" /&gt;&lt;label for="checkbox2"&gt;#tag3&lt;/label&gt;&lt;br/&gt;
+	&lt;!-- ... --&gt;
+
+	&lt;div class="buttons"&gt;
+		&lt;button onclick="/* ... */ MarcDialogs.close()"&gt;Accept&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+	<div class="js"><h4>JS</h4>
+	<pre><code>MarcDialogs.open('custom2');</code></pre>
+	</div>
+</div>
+<div class="result">
+	<h4>Result</h4>
+	<div>Try it out: <button onclick="MarcDialogs.open('custom2');">Open dialog</button></div>
+</div>
+
+
+
+<div id="dialog-custom2" class="dialog" style="max-width:300px">
+	You can stack dialogs. Try to edit tags.<br/>
+	<label for="item">Item</label>
+	<input type="text" id="item" class="full-width" />
+	Tags<br/>
+	<span id="tags">#tag1 #tag2</span> <span onclick="MarcDialogs.open('custom3')" style="cursor:pointer;text-decoration:underline;font-size:80%">Edit</span>
+
+	
+	<div class="buttons">
+		<button class="orange" onclick="MarcDialogs.close()">Accept</button>
+	</div>
+</div>
+
+
+
+<div id="dialog-custom3" class="dialog" style="max-width:200px">
+	<input type="checkbox" id="checkbox0" checked /><label for="checkbox0">#tag1</label><br/>
+	<input type="checkbox" id="checkbox1" checked /><label for="checkbox1">#tag2</label><br/>
+	<input type="checkbox" id="checkbox2" /><label for="checkbox2">#tag3</label><br/>
+	<input type="checkbox" id="checkbox3" /><label for="checkbox3">#tag4</label><br/>
+	<input type="checkbox" id="checkbox4" /><label for="checkbox4">#tag5</label><br/>
+	<input type="checkbox" id="checkbox5" /><label for="checkbox5">#tag6</label>
+
+	<div class="buttons">
+		<button class="orange" onclick="document.getElementById('tags').innerHTML='';for(var i=0;i<6;i++){if(document.getElementById('checkbox'+i).checked)document.getElementById('tags').innerHTML+='#tag'+(i+1)+' ';}MarcDialogs.close()">Accept</button>
+	</div>
+</div>
+
+
+</div>
+
+
+
+<!-- FOOTER -->
+<footer class="width">
+	Made by <a href="http://www.marcrobledo.com">Marc Robledo</a>.
+	Follow at: <a href="https://twitter.com/marc_robledo">@marc_robledo</a> &amp; <a href="https://github.com/marcrobledo">GitHub</a>.
+</footer>
+</body>
+</html>
